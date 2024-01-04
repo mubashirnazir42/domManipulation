@@ -1,5 +1,30 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
 .heading {
   color: blue;
   background-color: aquamarine;
   text-align: center;
+}
+
+#first-para {
+  padding: 25px;
+  margin-top: 25px;
+  color: blueviolet;
+}
+
+#second-para {
+  margin-bottom: 25px;
+}
+
+.div-class {
+  padding: 25px;
+  background-color: burlywood;
+}
+
+.div-class #fourth-para {
+  color: yellow;
 }
