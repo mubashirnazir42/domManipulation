@@ -4,6 +4,15 @@
   box-sizing: border-box;
 }
 
+.circle {
+  margin-left: 450px;
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  border: 5px solid black;
+  background-color: yellow;
+}
+
 .heading {
   color: blue;
   background-color: aquamarine;
