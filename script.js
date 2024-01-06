@@ -1,36 +1,22 @@
-"use strict";
-var btn = document.querySelector(".changed");
-var circle = document.querySelector(".circle");
-var square = document.querySelector(".square");
-let val = Math.trunc(Math.random() * 4);
-console.log(val);
+let guess = document.querySelector(".guess").value;
+var btncheck = document.querySelector(".check");
+let msg = document.querySelector(".message");
 
-console.log();
-btn.addEventListener("click", function () {
-  if (val === 0) {
-    circle.style.backgroundColor = "blue";
-    square.style.backgroundColor = "blue";
-    console.log(val);
-    val = Math.trunc(Math.random() * 4);
-  } else if (val === 1) {
-    circle.style.backgroundColor = "transparent";
-    square.style.backgroundColor = "transparent";
-    console.log(val);
-    val = Math.trunc(Math.random() * 4);
-  } else if (val === 2) {
-    circle.style.backgroundColor = "red";
-    square.style.backgroundColor = "red";
-    console.log(val);
-    val = Math.trunc(Math.random() * 4);
-  } else if (val === 3) {
-    circle.style.backgroundColor = "yellow";
-    square.style.backgroundColor = "yellow";
-    console.log(val);
-    val = Math.trunc(Math.random() * 4);
-  } else if (val === 4) {
-    circle.style.backgroundColor = "green";
-    square.style.backgroundColor = "green";
-    console.log(val);
-    val = Math.trunc(Math.random() * 4) + 1;
+btncheck.addEventListener("click", function () {
+  //   document.querySelector(".number").value = Math.trunc(Math.random() * 20);
+  document.querySelector(".number").value = 14;
+  let generatedNumber = document.querySelector(".number").value;
+  let guess = Number(document.querySelector(".guess").value);
+  let msg = document.querySelector(".message");
+
+  if (guess === generatedNumber) {
+    msg.innerHTML = "correct Answer";
+    document.querySelector("body").style.backgroundColor = "green";
+  } else if (guess > generatedNumber) {
+    msg.innerHTML = "high number";
+  } else if (guess < generatedNumber) {
+    msg.innerHTML = "lowNumber";
   }
+
+  console.log(guess, generatedNumber);
 });
